@@ -14,7 +14,7 @@ public class Admin {
 	public Admin()
 	{
 		String userNameO="Admin";
-		String admnPasswordO="Admin";
+		String admnPassword="Admin";
 	}
 	
 	void AdminLogin()
