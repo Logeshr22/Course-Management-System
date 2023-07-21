@@ -2,10 +2,14 @@ package com.digit.project.v2;
 
 import java.util.Scanner;
 
+class AdminC
+
+
 public class Admin {
 	Scanner sc = new Scanner(System.in);
 	String userNameO;
 	String admnPasswordO;
+	boolean Login =false;
 	
 	
 	String userNameI;
@@ -13,19 +17,28 @@ public class Admin {
 	
 	public Admin()
 	{
-		String userNameO="Admin";
-		String admnPasswordO="Admin";
+		userNameO="Admin";
+		admnPasswordO="Admin";
 	}
 	
 	void AdminLogin()
 	{
+		
+		
 		System.out.println("Enter Username:");
 		userNameI = sc.next();
 		System.out.println("Enter Password:");
 		admnPasswordI = sc.next();
+		
 	}
-	void RegisterCourse()
+	void LoginChk(String userNameI, String admnPasswordI)
 	{
-		System.out.println("Enter The no. of Courses you need to Register");
+		if(userNameO.equals(userNameI))
+		{
+			if(admnPasswordI.equals(admnPasswordO))
+			{
+				Login=true;
+			}
+		}
 	}
 }
