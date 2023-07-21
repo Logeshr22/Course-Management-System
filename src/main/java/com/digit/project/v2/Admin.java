@@ -13,6 +13,7 @@ class AdminComponent{
 	String userNameI;
 	String admnPasswordI;
 	
+	
 	AdminComponent()
 	{
 		userNameO="Admin";
