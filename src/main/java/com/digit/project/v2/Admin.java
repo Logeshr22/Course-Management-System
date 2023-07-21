@@ -79,6 +79,8 @@ class AdminComponent{
 		System.out.println(prof_id);
 		System.out.println(prof_name);
 		
+		
+		
 	}
 }
 
