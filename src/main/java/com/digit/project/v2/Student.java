@@ -28,7 +28,10 @@ public class Student {
 		hash_map.put(4109, "Varuna");
 		hash_map.put(4110, "Ziaudeen");
 
-
+		hash_map.forEach(
+	            (key, value)
+	                -> System.out.println(key + " : " + value));
+	   
 		//  System.out.println(hash_map.get(41010));
 
 
