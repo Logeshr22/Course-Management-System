@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import java.util.Scanner;
 
- 
 
 class AdminComponent{
     Scanner sc = new Scanner(System.in);
@@ -13,6 +12,12 @@ class AdminComponent{
     boolean Login =false;
     String userNameI;
     String admnPasswordI;
+    
+    ArrayList<Integer> stud_id = new ArrayList<Integer>();
+    ArrayList<String> stud_name = new ArrayList<String>();
+    
+    ArrayList<Integer> prof_id = new ArrayList<Integer>();
+    ArrayList<String> prof_name = new ArrayList<String>();
 
     AdminComponent()
 
@@ -49,13 +54,11 @@ class AdminComponent{
         }
     }
     
-    int member_cnt=0;
-    void createStudent()
+
+    void createStudent(int member_cnt)
     {
-        ArrayList<Integer> stud_id = new ArrayList<Integer>();
-        ArrayList<String> stud_name = new ArrayList<String>();
-        System.out.println("Enter the no. of students to be inserted");
-        int member_cnt = sc.nextInt();
+     
+        
         for(int i=0;i<member_cnt;i++)
         {
             stud_id.add(i);
@@ -66,10 +69,9 @@ class AdminComponent{
         System.out.println(stud_name);
     }
     
-    void createProffesor()
+    void createProffesor(int member_cnt)
     {
-        ArrayList<Integer> prof_id = new ArrayList<Integer>();
-        ArrayList<String> prof_name = new ArrayList<String>();
+        
         for(int i=0;i<member_cnt;i++)
         {
             prof_id.add(i);
@@ -83,11 +85,16 @@ class AdminComponent{
 }
 public class Admin {
     public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
         AdminComponent ad = new AdminComponent();
-//        ad.AdminLogin();
-        ad.createStudent();
-        ad.createProffesor();
-        System.out.println("Hello");
-        System.out.println();
+        ad.AdminLogin();
+        
+        System.out.println("Enter the no. of Proffessor and Students to be inserted");
+        int member_cnt = sc.nextInt();
+        
+        ad.createProffesor(member_cnt);
+        ad.createStudent(member_cnt);
+        
+        System.out.println("prof and students inserted successfully");
     }
 }
