@@ -1,5 +1,6 @@
 package com.digit.project.v2;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class AdminComponent{
@@ -45,13 +46,43 @@ class AdminComponent{
 		}
 	}
 	
-//	void createCourse()
-//	{
-//		
-//	}
-//	
+
 	void createStudent()
 	{
+		String TmpName;
+		ArrayList<Integer> stud_id = new ArrayList<Integer>();
+		ArrayList<String> stud_name = new ArrayList<String>();
+		System.out.println("Enter the no. of students to be inserted");
+		int stud_num = sc.nextInt();
+		System.out.println();
+		for(int i=0;i<stud_num;i++)
+		{
+			stud_id.add(i);
+			System.out.println("Enter Student Name:");
+			TmpName=sc.next();
+			stud_name.add(TmpName);
+		}
+		System.out.println(stud_id);
+		System.out.println(stud_name);
+		
+	}
+	void createProffesor()
+	{
+		String TmpName;
+		ArrayList<Integer> prof_id = new ArrayList<Integer>();
+		ArrayList<String> prof_name = new ArrayList<String>();
+		System.out.println("Enter the no. of students to be inserted");
+		int stud_num = sc.nextInt();
+		System.out.println();
+		for(int i=0;i<stud_num;i++)
+		{
+			prof_id.add(i);
+			System.out.println("Enter Student Name:");
+			TmpName=sc.next();
+			prof_name.add(TmpName);
+		}
+		System.out.println(prof_id);
+		System.out.println(prof_name);
 		
 	}
 }
@@ -60,7 +91,8 @@ class AdminComponent{
 public class Admin {
 	public static void main(String[] args) {
 		AdminComponent ad = new AdminComponent();
-		ad.AdminLogin();
-		System.out.println("Enter 1. To Create Student");
+//		ad.AdminLogin();
+		ad.createStudent();
+		ad.createProffesor();
 	}
 }
