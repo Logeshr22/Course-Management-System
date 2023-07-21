@@ -2,6 +2,7 @@ package com.digit.project.v2;
 import java.util.*;
 public class Professor {
 	public static void main(String[] args) {
+		
 		Admin admin = new Admin();
 		Scanner sc = new Scanner(System.in);
 		String usernameO = "Professor";
@@ -26,8 +27,9 @@ public class Professor {
 		}
 	}
 	
-	public void StudentDetails() {
-		
+	public void StudentDetails(ArrayList<Integer> id, ArrayList<String> name) {
+		System.out.println(id);
+		System.out.println(name);
 	}
 }
 

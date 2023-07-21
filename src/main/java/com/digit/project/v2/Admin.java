@@ -92,9 +92,13 @@ public class Admin {
         System.out.println("Enter the no. of Proffessor and Students to be inserted");
         int member_cnt = sc.nextInt();
         
+        
         ad.createProffesor(member_cnt);
         ad.createStudent(member_cnt);
         
         System.out.println("prof and students inserted successfully");
+        
+        Professor pf = new Professor();
+        pf.StudentDetails(ad.prof_id, ad.prof_name);
     }
 }
