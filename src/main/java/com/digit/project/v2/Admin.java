@@ -2,10 +2,7 @@ package com.digit.project.v2;
 
 import java.util.Scanner;
 
-class AdminC
-
-
-public class Admin {
+class AdminComponent{
 	Scanner sc = new Scanner(System.in);
 	String userNameO;
 	String admnPasswordO;
@@ -15,7 +12,7 @@ public class Admin {
 	String userNameI;
 	String admnPasswordI;
 	
-	public Admin()
+	AdminComponent()
 	{
 		userNameO="Admin";
 		admnPasswordO="Admin";
@@ -23,8 +20,6 @@ public class Admin {
 	
 	void AdminLogin()
 	{
-		
-		
 		System.out.println("Enter Username:");
 		userNameI = sc.next();
 		System.out.println("Enter Password:");
@@ -40,5 +35,12 @@ public class Admin {
 				Login=true;
 			}
 		}
+	}
+}
+
+
+public class Admin {
+	public static void main(String[] args) {
+		
 	}
 }
