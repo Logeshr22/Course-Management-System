@@ -46,21 +46,19 @@ class AdminComponent{
 		}
 	}
 	
-
+	int member_cnt=0;
 	void createStudent()
 	{
-		String TmpName;
 		ArrayList<Integer> stud_id = new ArrayList<Integer>();
 		ArrayList<String> stud_name = new ArrayList<String>();
 		System.out.println("Enter the no. of students to be inserted");
-		int stud_num = sc.nextInt();
+		int member_cnt = sc.nextInt();
 		System.out.println();
-		for(int i=0;i<stud_num;i++)
+		for(int i=0;i<member_cnt;i++)
 		{
 			stud_id.add(i);
 			System.out.println("Enter Student Name:");
-			TmpName=sc.next();
-			stud_name.add(TmpName);
+			stud_name.add(sc.next());
 		}
 		System.out.println(stud_id);
 		System.out.println(stud_name);
@@ -68,25 +66,21 @@ class AdminComponent{
 	}
 	void createProffesor()
 	{
-		String TmpName;
 		ArrayList<Integer> prof_id = new ArrayList<Integer>();
 		ArrayList<String> prof_name = new ArrayList<String>();
-		System.out.println("Enter the no. of students to be inserted");
-		int stud_num = sc.nextInt();
+		
 		System.out.println();
-		for(int i=0;i<stud_num;i++)
+		for(int i=0;i<member_cnt;i++)
 		{
 			prof_id.add(i);
-			System.out.println("Enter Student Name:");
-			TmpName=sc.next();
-			prof_name.add(TmpName);
+			System.out.println("Enter Professor Name:");
+			prof_name.add(sc.next());
 		}
 		System.out.println(prof_id);
 		System.out.println(prof_name);
 		
 	}
 }
-
 
 public class Admin {
 	public static void main(String[] args) {
