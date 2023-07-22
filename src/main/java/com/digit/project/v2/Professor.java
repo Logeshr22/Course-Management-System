@@ -27,7 +27,7 @@ public class Professor {
 		}
 	}
 	
-	public void StudentDetails(ArrayList<Integer> id, ArrayList<String> name) {
+	public void ProfessorDetails(ArrayList<Integer> id, ArrayList<String> name) {
 		System.out.println(id);
 		System.out.println(name);
 	}

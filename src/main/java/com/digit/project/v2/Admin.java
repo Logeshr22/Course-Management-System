@@ -83,6 +83,7 @@ class AdminComponent{
     }
 
 }
+
 public class Admin {
     public static void main(String[] args) {
     	Scanner sc = new Scanner(System.in);
@@ -99,9 +100,12 @@ public class Admin {
         System.out.println("prof and students inserted successfully");
         
         Professor pf = new Professor();
-        pf.StudentDetails(ad.prof_id, ad.prof_name);
+        pf.ProfessorDetails(ad.prof_id, ad.prof_name);
         Student st = new Student();
+        st.StudentDetails(ad.stud_id, ad.stud_name);
         
+        
+        Course crs = new Course();
         
         
     }
