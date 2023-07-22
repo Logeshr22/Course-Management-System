@@ -100,6 +100,10 @@ public class Admin {
         
         Professor pf = new Professor();
         pf.StudentDetails(ad.prof_id, ad.prof_name);
+        Student st = new Student();
+        
+        
+        
     }
     
 }
