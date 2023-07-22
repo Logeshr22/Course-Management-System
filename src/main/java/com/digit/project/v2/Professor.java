@@ -28,6 +28,8 @@ public class Professor {
 	}
 	
 	public void ProfessorDetails(ArrayList<Integer> id, ArrayList<String> name) {
+		
+		System.out.println("printing from professor class");
 		System.out.println(id);
 		System.out.println(name);
 	}
