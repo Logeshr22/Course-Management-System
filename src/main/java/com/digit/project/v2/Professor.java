@@ -1,38 +1,38 @@
 package com.digit.project.v2;
 import java.util.*;
 public class Professor {
-	public static void main(String[] args) {
-		
-		Admin admin = new Admin();
-		Scanner sc = new Scanner(System.in);
-		String usernameO = "Professor";
-		String passwordO = "professor";
-		System.out.println("Enter the Username : ");
-		String username = sc.nextLine();
-		System.out.println("Enter the Password : ");
-		String password = sc.nextLine();
-		if(username.equals(usernameO) && password.equals(passwordO)) {
-			System.out.println("Login Successful");
-			System.out.println();
-			System.out.println("1. Grade Students");
-			System.out.println("2. View Student Details");
-			int input = sc.nextInt();
-			switch(input) {
-			case 1 :
-				
+	Scanner sc = new Scanner(System.in);
+	AdminComponent admin = new AdminComponent();
+	static ArrayList<Integer> ProfessorID = new ArrayList<Integer>();
+	static ArrayList<String> ProfessorName = new ArrayList<String>();
+    static ArrayList<String> courseIn = new ArrayList<String>();
+	public void profDetails() {		
+		System.out.println("Professor Details : ");
+		System.out.println();
+		ListIterator<Integer> idIterator= ProfessorID.listIterator();
+		ListIterator<String> namesIterator = ProfessorName.listIterator();
+		ListIterator<String> courseIterator = courseIn.listIterator();
+		System.out.println("=======================");
+		System.out.println("ID\tName\tCourse\t");
+		System.out.println("=======================");
+
+		for(int i = 0;i<ProfessorID.size();i++) {
+			System.out.print("#"+idIterator.next()+"\t");
+			for(int j = 0;j<1;j++) {
+				System.out.print(namesIterator.next()+"\t");
+				for(int k = 0;k<1;k++) {
+					System.out.println(courseIterator.next()+"\t");
+				}
 			}
+			System.out.println();
 		}
-		else {
-			System.out.println("Invalid Credentials");
-		}
+		System.out.println("=======================");
 	}
 	
-	public void ProfessorDetails(ArrayList<Integer> id, ArrayList<String> name) {
+	public void gradeStudents(ArrayList<Integer> id, ArrayList<String> name) {
 		
-		System.out.println("printing from professor class");
-		System.out.println(id);
-		System.out.println(name);
 	}
+
 }
 
 
