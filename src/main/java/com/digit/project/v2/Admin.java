@@ -9,8 +9,8 @@ class AdminComponent{
     boolean Login =false;
     String userNameI;
     String admnPasswordI;
-    static int memberCount = 4;
-    static int courseCount = 4;
+    static int memberCount;
+    static int courseCount;
 //    Course crs = new Course();
     
     AdminComponent()
@@ -54,37 +54,47 @@ class AdminComponent{
 
     void createStudent(int member_cnt)
     {  
+    	int id = 1;
+    	String name;
+    	String course;
     	Professor pf = new Professor();
     	System.out.println();
     	System.out.println("=== Student Details ===");
     	System.out.println();
         for(int i=0;i<member_cnt;i++)
         {
-        	String course;
             System.out.println("Enter name of Student "+(i+1)+" :");
-            Student.studentName.add(sc.next());
+            name = sc.next();
+            Student.studentName.add(name);
             System.out.println("Select the course for the Student ID #"+(i+1)+" : ");
             System.out.println(Course.crs_name);
             course = sc.next();
             Student.selectedCourse.add(course);
             pf.assignCourse(course);
-            Student.studentID.add(i+1);
+            Student.studentID.add(id);
+            Student.mapDetails.put(id,name);
+            id++;
         }
     }
    
     void createProfessor(int member_cnt)
     {
+    	int id = 1;
+    	String name;
     	System.out.println();
     	System.out.println("=== Professor Details ===");
     	System.out.println();
         for(int i=0;i<member_cnt;i++)
         {
         	System.out.println("Enter name of Professor "+(i+1)+" : ");
-        	Professor.ProfessorName.add(sc.next());
+        	name = sc.next();
+        	Professor.ProfessorName.add(name);
             System.out.println("Specify the course for Professor ID #"+(i+1)+" : ");
             System.out.println(Course.crs_name);
             Professor.courseIn.add(sc.next());
-            Professor.ProfessorID.add(i+1);
+            Professor.ProfessorID.add(id);
+            Professor.mapDetails.put(id, name);
+            id++;
         }
     }
     
@@ -111,7 +121,6 @@ public class Admin {
             AdminComponent.memberCount = sc.nextInt();
             System.out.println("Enter the number of courses to add : ");
             AdminComponent.courseCount = sc.nextInt();
-            
             ad.createCourse(AdminComponent.courseCount);
             System.out.println("Courses added successfully.");
             ad.createProfessor(AdminComponent.memberCount);
@@ -124,7 +133,9 @@ public class Admin {
             stud.studentDetails();
             System.out.println();
             System.out.println("Student details inserted successfully.");
+            System.out.println("HashMap : "+Professor.mapDetails);
             prof.grading();
+            stud.scoreCard();
         }
         else {
         	System.out.println("Try Again.");

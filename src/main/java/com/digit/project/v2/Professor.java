@@ -32,9 +32,12 @@ public class Professor {
 		return login;
 	}
 	public void grading() {
+		Student stud = new Student();
+		int getID;
+		int gradeMark;
 		System.out.println();
 		System.out.println(mapDetails);
-		System.out.println("Professor Section :");
+		System.out.println("========== PROFESSOR ==========");
 		System.out.println();
 		System.out.println("Enter Professor ID : ");
 		int pID = sc.nextInt();
@@ -42,7 +45,20 @@ public class Professor {
 		String pName = sc.next();
 		if(loginCheck(pID,pName)==true) {
 			System.out.println("1.Grade Students");
-			System.out.println("2.View Students Details");
+			switch(sc.nextInt()) {
+			case 1 :
+			{
+				for(int i = 0;i<AdminComponent.memberCount;i++) {
+					System.out.println("Enter student ID : ");
+					getID = sc.nextInt();
+					System.out.println("Enter Grade out of 100 : ");
+					gradeMark = sc.nextInt();
+					Student.mapGrade.put(getID,gradeMark);
+					System.out.println("Student Graded Successfully.");
+				}
+				System.out.println(Student.mapGrade);
+			}
+			}
 		}
 		else {
 			System.out.println("Login Failed.");
@@ -77,14 +93,10 @@ public class Professor {
 
 	}
 	public void mapValues() {
-		ListIterator<Integer> idIterator= ProfessorID.listIterator();
 		ListIterator<String> namesIterator = ProfessorName.listIterator();
 		ListIterator<String> courseIterator = courseIn.listIterator();
 		while(namesIterator.hasNext()) {
 			map.put(namesIterator.next(),courseIterator.next());
-		}
-		while(namesIterator.hasNext()) {
-			mapDetails.put(idIterator.next(), namesIterator.next());
 		}
 		
 	}
