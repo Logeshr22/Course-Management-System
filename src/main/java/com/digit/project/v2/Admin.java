@@ -124,7 +124,7 @@ public class Admin {
             stud.studentDetails();
             System.out.println();
             System.out.println("Student details inserted successfully.");
-            
+            prof.grading();
         }
         else {
         	System.out.println("Try Again.");

@@ -8,6 +8,7 @@ public class Professor {
 	static ArrayList<String> ProfessorName = new ArrayList<String>();
     static ArrayList<String> courseIn = new ArrayList<String>();
 	static HashMap<String,String> map = new HashMap<String,String>();
+	static HashMap<Integer,String> mapDetails = new HashMap<Integer,String>();
 	
 	
 	
@@ -17,6 +18,37 @@ public class Professor {
 				Student.assignedProfessor.add(entry.getKey());
 			}
 		}
+	}
+	
+	public boolean loginCheck(int id,String name)
+	{
+		boolean login = false;
+		for(Entry<Integer,String> entry : mapDetails.entrySet()) {
+			if(id==entry.getKey() && name.equals(entry.getValue())) {
+				System.out.println("Login successful.");
+				login = true;
+			}
+		}
+		return login;
+	}
+	public void grading() {
+		System.out.println();
+		System.out.println(mapDetails);
+		System.out.println("Professor Section :");
+		System.out.println();
+		System.out.println("Enter Professor ID : ");
+		int pID = sc.nextInt();
+		System.out.println("Enter Professor Name : ");
+		String pName = sc.next();
+		if(loginCheck(pID,pName)==true) {
+			System.out.println("1.Grade Students");
+			System.out.println("2.View Students Details");
+		}
+		else {
+			System.out.println("Login Failed.");
+		}
+		
+		
 	}
 
 	public void profDetails() {	
@@ -45,11 +77,16 @@ public class Professor {
 
 	}
 	public void mapValues() {
+		ListIterator<Integer> idIterator= ProfessorID.listIterator();
 		ListIterator<String> namesIterator = ProfessorName.listIterator();
 		ListIterator<String> courseIterator = courseIn.listIterator();
 		while(namesIterator.hasNext()) {
 			map.put(namesIterator.next(),courseIterator.next());
 		}
+		while(namesIterator.hasNext()) {
+			mapDetails.put(idIterator.next(), namesIterator.next());
+		}
+		
 	}
 	public void gradeStudents(ArrayList<Integer> id, ArrayList<String> name) {
 		

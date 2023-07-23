@@ -30,7 +30,7 @@ public class Student {
 				for(int k = 0;k<1;k++) {
 					System.out.print(scourseIterator.next()+"\t");
 					for(int l = 0;l<1;l++) {
-						System.out.print(sprofIterator.next()+"\t");
+						System.out.println(sprofIterator.next()+"\t");
 					}
 				}
 			}
