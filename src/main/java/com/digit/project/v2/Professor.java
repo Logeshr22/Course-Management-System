@@ -32,11 +32,10 @@ public class Professor {
 		return login;
 	}
 	public void grading() {
-		Student stud = new Student();
 		int getID;
 		int gradeMark;
 		System.out.println();
-		System.out.println(mapDetails);
+//		System.out.println(mapDetails);
 		System.out.println("========== PROFESSOR ==========");
 		System.out.println();
 		System.out.println("Enter Professor ID : ");
@@ -61,7 +60,7 @@ public class Professor {
 			}
 		}
 		else {
-			System.out.println("Login Failed.");
+			System.err.println("Login Failed.");
 		}
 		
 		

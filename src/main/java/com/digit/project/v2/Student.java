@@ -44,11 +44,9 @@ public class Student {
 		System.out.println("=======================================");
 	}
 	public void assignGrades(int id) {
-		for(Entry<Integer,Integer> entry : mapGrade.entrySet()) {
-			if(id==entry.getKey()) {
-				Student.assignedGrade.add(entry.getValue());
-			}
-		}
+			for(Entry<Integer,Integer> entry : mapGrade.entrySet()) {
+					Student.assignedGrade.add(entry.getValue());
+			}	
 	}
 	
 	public boolean loginCheck(int id,String name)
@@ -68,7 +66,7 @@ public class Student {
 		ListIterator<String> snamesIterator = studentName.listIterator();
 		ListIterator<String> scourseIterator = selectedCourse.listIterator();
 		ListIterator<String> sprofIterator = assignedProfessor.listIterator();
-		
+
 		System.out.println("========== STUDENT ==========");
 		System.out.println();
 		System.out.println("Enter Student ID : ");
@@ -86,6 +84,7 @@ public class Student {
 				System.out.println("ID\tStudent\tCourse\tProfessor\tGrade");
 				System.out.println("============================================================");
 				System.out.println();
+				ListIterator<Integer> sgradeIterator = assignedGrade.listIterator();
 				for(int i = 0;i<studentID.size();i++) {
 					System.out.print("#"+sidIterator.next()+"\t");
 					for(int j = 0;j<1;j++) {
@@ -95,7 +94,6 @@ public class Student {
 							for(int l = 0;l<1;l++) {
 								System.out.print(sprofIterator.next()+"\t\t");
 								for(int m = 0;m<1;m++) {
-									ListIterator<Integer> sgradeIterator = assignedGrade.listIterator();
 									System.out.println(sgradeIterator.next()+"\t");
 								}
 							}
@@ -109,7 +107,7 @@ public class Student {
 			}
 		}
 		else {
-			System.out.println("Login Failed.");
+			System.err.println("Login Failed.");
 		}
 		
 		

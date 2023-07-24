@@ -46,7 +46,7 @@ class AdminComponent{
         }
         else
         {
-            System.out.println("Login Failed.");
+            System.err.println("Login Failed.");
             return false;
         }
     }
@@ -128,17 +128,17 @@ public class Admin {
             System.out.println();
             System.out.println("Professor details inserted successfully.");
             prof.mapValues();
-            System.out.println("HashMap : "+Professor.map);
+//            System.out.println("HashMap : "+Professor.map);
             ad.createStudent(AdminComponent.memberCount);
             stud.studentDetails();
             System.out.println();
             System.out.println("Student details inserted successfully.");
-            System.out.println("HashMap : "+Professor.mapDetails);
+//            System.out.println("HashMap : "+Professor.mapDetails);
             prof.grading();
             stud.scoreCard();
         }
         else {
-        	System.out.println("Try Again.");
+        	System.err.println("Try Again.");
         }
         sc.close();
     }
