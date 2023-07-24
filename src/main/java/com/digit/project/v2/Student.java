@@ -24,9 +24,9 @@ public class Student {
 		ListIterator<String> sprofIterator = assignedProfessor.listIterator();
 
 		
-		System.out.println("============================================================");
+		System.out.println("=======================================");
 		System.out.println("ID\tStudent\tCourse\tProfessor\t");
-		System.out.println("============================================================");
+		System.out.println("=======================================");
 		System.out.println();
 		for(int i = 0;i<studentID.size();i++) {
 			System.out.print("#"+sidIterator.next()+"\t");
@@ -41,7 +41,7 @@ public class Student {
 			}
 			System.out.println();
 		}
-		System.out.println("============================================================");
+		System.out.println("=======================================");
 	}
 	public void assignGrades(int id) {
 		for(Entry<Integer,Integer> entry : mapGrade.entrySet()) {
@@ -68,7 +68,6 @@ public class Student {
 		ListIterator<String> snamesIterator = studentName.listIterator();
 		ListIterator<String> scourseIterator = selectedCourse.listIterator();
 		ListIterator<String> sprofIterator = assignedProfessor.listIterator();
-		ListIterator<Integer> sgradeIterator = assignedGrade.listIterator();
 		
 		System.out.println("========== STUDENT ==========");
 		System.out.println();
@@ -94,8 +93,9 @@ public class Student {
 						for(int k = 0;k<1;k++) {
 							System.out.print(scourseIterator.next()+"\t");
 							for(int l = 0;l<1;l++) {
-								System.out.print(sprofIterator.next()+"\t");
+								System.out.print(sprofIterator.next()+"\t\t");
 								for(int m = 0;m<1;m++) {
+									ListIterator<Integer> sgradeIterator = assignedGrade.listIterator();
 									System.out.println(sgradeIterator.next()+"\t");
 								}
 							}
