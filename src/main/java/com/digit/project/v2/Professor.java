@@ -79,15 +79,22 @@ public class Professor {
 		System.out.println("======================================");
 		System.out.println();
 		for(int i = 0;i<ProfessorID.size();i++) {
-			System.out.print("#"+idIterator.next()+"\t");
-			for(int j = 0;j<1;j++) {
-				System.out.print(namesIterator.next()+"\t\t");
-				for(int k = 0;k<1;k++) {
-					System.out.println(courseIterator.next()+"\t");
-				}
+			while(idIterator.hasNext())
+			{
+				System.out.print("#"+idIterator.next()+"\t");
+				break;
 			}
-			System.out.println();
+			while(namesIterator.hasNext()) {
+				System.out.print(namesIterator.next()+"\t\t");
+				break;
+			}
+			while(courseIterator.hasNext()) {
+				System.out.print(courseIterator.next()+"\t");
+				System.out.println("");
+				break;
+			}
 		}
+		System.out.println("");
 		System.out.println("======================================");
 
 	}

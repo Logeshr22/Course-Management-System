@@ -28,18 +28,24 @@ public class Student {
 		System.out.println("ID\tStudent\tCourse\tProfessor\t");
 		System.out.println("=======================================");
 		System.out.println();
-		for(int i = 0;i<studentID.size();i++) {
-			System.out.print("#"+sidIterator.next()+"\t");
-			for(int j = 0;j<1;j++) {
-				System.out.print(snamesIterator.next()+"\t");
-				for(int k = 0;k<1;k++) {
-					System.out.print(scourseIterator.next()+"\t");
-					for(int l = 0;l<1;l++) {
-						System.out.println(sprofIterator.next()+"\t");
-					}
-				}
+		for(int i = 0;i<AdminComponent.memberCount;i++) {
+			while(sidIterator.hasNext()) {
+				System.out.print("#"+sidIterator.next()+"\t");
+				break;
 			}
-			System.out.println();
+			while(snamesIterator.hasNext()) {
+				System.out.print(snamesIterator.next()+"\t\t");
+				break;
+			}
+			while(scourseIterator.hasNext()) {
+				System.out.print(scourseIterator.next()+"\t");
+				break;
+			}
+			while(sprofIterator.hasNext()) {
+				System.out.print(sprofIterator.next()+"\t");
+				System.out.println("");
+				break;
+			}
 		}
 		System.out.println("=======================================");
 	}
@@ -85,22 +91,28 @@ public class Student {
 				System.out.println("============================================================");
 				System.out.println();
 				ListIterator<Integer> sgradeIterator = assignedGrade.listIterator();
-				for(int i = 0;i<studentID.size();i++) {
-					System.out.print("#"+sidIterator.next()+"\t");
-					for(int j = 0;j<1;j++) {
-						System.out.print(snamesIterator.next()+"\t");
-						for(int k = 0;k<1;k++) {
-							System.out.print(scourseIterator.next()+"\t");
-							for(int l = 0;l<1;l++) {
-								System.out.print(sprofIterator.next()+"\t\t");
-								for(int m = 0;m<1;m++) {
-									System.out.println(sgradeIterator.next()+"\t");
-								}
-							}
-							
-						}
+				for(int i = 0;i<AdminComponent.memberCount;i++) {
+					while(sidIterator.hasNext()) {
+						System.out.print("#"+sidIterator.next()+"\t");
+						break;
 					}
-					System.out.println();
+					while(snamesIterator.hasNext()) {
+						System.out.print(snamesIterator.next()+"\t\t");
+						break;
+					}
+					while(scourseIterator.hasNext()) {
+						System.out.print(scourseIterator.next()+"\t");
+						break;
+					}
+					while(sprofIterator.hasNext()) {
+						System.out.print(sprofIterator.next()+"\t");
+						break;
+					}
+					while(sgradeIterator.hasNext()) {
+						System.out.print(sgradeIterator.next()+"\t");
+						System.out.println("");
+						break;
+					}
 				}
 				System.out.println("============================================================");
 			}
