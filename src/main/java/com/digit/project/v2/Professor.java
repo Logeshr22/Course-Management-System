@@ -62,8 +62,6 @@ public class Professor {
 		else {
 			System.err.println("Login Failed.");
 		}
-		
-		
 	}
 
 	public void profDetails() {	
