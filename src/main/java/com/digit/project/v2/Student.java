@@ -22,7 +22,7 @@ public class Student {
 		System.out.println("Student Details : ");
 		System.out.println();
 		
-		System.out.println(Student.assignedProfessor);//debugging
+//		System.out.println(Student.assignedProfessor);//debugging
 		
 		ListIterator<Integer> sidIterator= studentID.listIterator();
 		ListIterator<String> snamesIterator = studentName.listIterator();
@@ -68,38 +68,6 @@ public class Student {
 	
 	
 	//to assign the grades
-	
-	public void assignGrades() {
-		ListIterator<Integer> marks = assignedMark.listIterator();
-//		System.out.println("In the assignGrades method"); //debugging
-
-//		for(int i = 0;i<AdminComponent.memberCount;i++) {
-//			System.out.println("in the for loop"); //debugging
-//			while(marks.hasNext()) {
-//				int currentMark = marks.next();
-//				System.out.println("In the while loop"); //debugging
-//				System.out.println(marks.next());
-//				System.out.println(marks.next());
-//				if(currentMark>=0 && currentMark<60) {
-//					System.out.println("In the first if block");//debugging
-//					assignedGrade.add("E");
-//				}
-//				else if(currentMark>=60 && currentMark<70) {
-//					assignedGrade.add("D");
-//				}
-//				else if(currentMark>=70 && currentMark<80) {
-//					assignedGrade.add("C");
-//				}
-//				else if(currentMark>=80 && currentMark<90) {
-//					assignedGrade.add("B");
-//				}
-//				else if(currentMark>=90 && currentMark<100) {
-//					assignedGrade.add("A");
-//				}
-//				
-//			}
-//		}
-	}
 	
 	//checking login of student
 	public boolean loginCheck(int id,String name)
