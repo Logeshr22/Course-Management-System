@@ -5,6 +5,7 @@ public class Professor {
 	Scanner sc = new Scanner(System.in);
 	
 	AdminComponent admin = new AdminComponent();
+	
 	static ArrayList<Integer> ProfessorID = new ArrayList<Integer>();
 	static ArrayList<String> ProfessorName = new ArrayList<String>();
     static ArrayList<String> courseIn = new ArrayList<String>();
@@ -55,7 +56,7 @@ public class Professor {
 					Student.mapMark.put(getID,gradeMark);
 					System.out.println("Student Graded Successfully.");
 				}
-				System.out.println(Student.mapMark);
+//				System.out.println(Student.mapMark); //debugging
 			}
 			}
 		}
