@@ -3,13 +3,13 @@ import java.util.*;
 import java.util.Map.Entry;
 public class Professor {
 	Scanner sc = new Scanner(System.in);
+	
 	AdminComponent admin = new AdminComponent();
 	static ArrayList<Integer> ProfessorID = new ArrayList<Integer>();
 	static ArrayList<String> ProfessorName = new ArrayList<String>();
     static ArrayList<String> courseIn = new ArrayList<String>();
 	static HashMap<String,String> map = new HashMap<String,String>();
 	static HashMap<Integer,String> mapDetails = new HashMap<Integer,String>();
-	
 	
 	
 	public void assignCourse(String name) {
@@ -35,7 +35,7 @@ public class Professor {
 		int getID;
 		int gradeMark;
 		System.out.println();
-//		System.out.println(mapDetails);
+//		System.out.println(mapDetails); //debugging
 		System.out.println("========== PROFESSOR ==========");
 		System.out.println();
 		System.out.println("Enter Professor ID : ");
@@ -52,10 +52,10 @@ public class Professor {
 					getID = sc.nextInt();
 					System.out.println("Enter Grade out of 100 : ");
 					gradeMark = sc.nextInt();
-					Student.mapGrade.put(getID,gradeMark);
+					Student.mapMark.put(getID,gradeMark);
 					System.out.println("Student Graded Successfully.");
 				}
-				System.out.println(Student.mapGrade);
+				System.out.println(Student.mapMark);
 			}
 			}
 		}
@@ -102,9 +102,6 @@ public class Professor {
 		while(namesIterator.hasNext()) {
 			map.put(namesIterator.next(),courseIterator.next());
 		}
-		
-	}
-	public void gradeStudents(ArrayList<Integer> id, ArrayList<String> name) {
 		
 	}
 

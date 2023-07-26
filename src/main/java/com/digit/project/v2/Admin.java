@@ -6,12 +6,11 @@ class AdminComponent{
     Scanner sc = new Scanner(System.in);
     String userNameO;
     String admnPasswordO;
-    boolean Login =false;
+    boolean Login = false;
     String userNameI;
     String admnPasswordI;
     static int memberCount;
     static int courseCount;
-//    Course crs = new Course();
     
     AdminComponent()
 
